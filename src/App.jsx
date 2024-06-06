@@ -13,8 +13,9 @@ const App = () => {
   const handleClickPokemonRandomId = () => {
     setPokemonId(Math.floor(Math.random() * 1001));
   };
+
   return (
-    <>
+    <div className="container">
       {pokemonLoading || pokemonIdLoading ? (
         <div>Loading...</div>
       ) : pokemonError || pokemonIdError ? (
@@ -29,7 +30,7 @@ const App = () => {
           />
         </div>
       )}
-    </>
+    </div>
   );
 };
 
