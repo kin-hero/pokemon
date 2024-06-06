@@ -1,10 +1,11 @@
+// App.js
 import React from "react";
 import "./App.css";
 import usePokemonName from "./hooks/usePokemonName.js";
 
 const App = () => {
   const [pokemonLoading, pokemonError, pokemonData] = usePokemonName("pikachu");
-  console.log("pokemonData", pokemonData);
+  console.log("pokemonData", pokemonData?.sprites?.other);
 
   return (
     <>
@@ -13,7 +14,13 @@ const App = () => {
       ) : pokemonError ? (
         <div>Oh no! There was an error</div>
       ) : (
-        <p>Api Success</p>
+        <div>
+          <h1>{pokemonData.name}</h1>
+          <img
+            src={pokemonData?.sprites?.other?.["official-artwork"]?.front_default}
+            alt={pokemonData.name}
+          />
+        </div>
       )}
     </>
   );
