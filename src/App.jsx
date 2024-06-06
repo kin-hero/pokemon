@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
-import usePokemon from "./hooks/usePokemon.js";
+import usePokemonName from "./hooks/usePokemonName.js";
 
 const App = () => {
-  const [pokemonLoading, pokemonError, pokemonData] = usePokemon("pikachu");
+  const [pokemonLoading, pokemonError, pokemonData] = usePokemonName("pikachu");
   console.log("pokemonData", pokemonData);
+
   return (
     <>
       {pokemonLoading ? (

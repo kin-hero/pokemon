@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-const usePokemon = (pokemonName) => {
+const usePokemonName = (pokemonName) => {
   const {
     isLoading: pokemonLoading,
     isError: pokemonError,
@@ -16,4 +16,4 @@ const usePokemon = (pokemonName) => {
 
   return [pokemonLoading, pokemonError, pokemonData];
 };
-export default usePokemon;
+export default usePokemonName;
