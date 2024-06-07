@@ -22,7 +22,7 @@ const App = () => {
         <div>Oh no! There was an error</div>
       ) : (
         <div>
-          <button onClick={handleClickPokemonRandomId}>Generate A New Pokemon</button>
+          <button onClick={handleClickPokemonRandomId}>Generate A New Pokemon !!!</button>
           <h1>{pokemonIdData.name.toUpperCase()}</h1>
           <LazyLoadImage
             src={pokemonIdData?.sprites?.other?.["official-artwork"]?.front_default}
